@@ -12,7 +12,7 @@ This is a fun and productivity-boosting app I built to streamline the process of
 
 ## 🐞 Report Bugs & Issues
 
-If you come across any errors or bugs while using the app, please don't hesitate to [notify me](mailto:your-email@example.com) or open an issue in the repository. Your feedback helps improve the app!
+If you come across any errors or bugs while using the app, please don't hesitate to [notify me](mailto:bogdanmihairobert@gmail.com) or open an issue in the repository. Your feedback helps improve the app!
 
 ---
 
