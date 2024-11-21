@@ -2,7 +2,7 @@ import os
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from PIL import Image, ImageTk
-from typing import Tuple, Optional
+from typing import Tuple
 import itertools
 import math
 
