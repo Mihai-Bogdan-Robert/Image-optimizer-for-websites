@@ -10,7 +10,7 @@ class ImageTool(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        self.title("Image Tool")
+        self.title("Imagego")
         self.geometry("800x600")
         self.configure(bg="#f0f2f5")
 

@@ -1,9 +1,9 @@
 <a id="back-top"></a>
 <div align="center">
-  <img src="logo.png" alt="App Logo" title="Imagizer app logo">
+  <img src="logo.png" alt="App Logo" title="Imagego app logo">
 </div>
 
-# Imagizer App
+# Imagego App
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -24,7 +24,7 @@
         <li><a href="#running-the-app-on-macos">Running the app on macOS</a></li>
       </ul>
     </li>
-    <li><a href="#-how-does-imagizer-work">How does Imagizer work</a></li>
+    <li><a href="#-how-does-Imagego-work">How does Imagego work</a></li>
     <li><a href="#-report-bugs--issues">Report Bugs & Issues</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -62,7 +62,7 @@ To get a local copy up and running follow these simple example steps.
 
 Below is a picture with all the imported libraries that are required for this app to work.
 
-<img src="requirements.png" alt="App Requirements" title="Imagizer library requirements">
+<img src="requirements.png" alt="App Requirements" title="Imagego library requirements">
 
 You can easily install all required packages with the help of the *requirements.txt* file by running the following command (You need to have *python3* and *pip3* installed):
 
@@ -84,7 +84,7 @@ To install the application simply clone the git repository locally and run the r
    ```
 2. Run the program
    ```sh
-   python3 ./Imagizer.py
+   python3 ./Imagego.py
    ```
 
 *In the near future there will be a single executable file that handles everything. COMING SOON...*
@@ -92,10 +92,10 @@ To install the application simply clone the git repository locally and run the r
 ### Running the app on macOS
 *COMING SOON...*
 
-<!-- HOW DOES IMAGIZER WORK -->
-## ✨ How does Imagizer work
+<!-- HOW DOES Imagego WORK -->
+## ✨ How does Imagego work
 
-Imagizer application is split into 4 different tabs acoording to the functionalities:
+Imagego application is split into 4 different tabs acoording to the functionalities:
 * Resize Images
 * Rename Images
 * Convert Images
