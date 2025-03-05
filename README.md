@@ -87,7 +87,11 @@ To install the application simply clone the git repository locally and run the r
    python3 ./Imagego.py
    ```
 
-*In the near future there will be a single executable file that handles everything. COMING SOON...*
+*If you get some errors with the normal app that uses a tkinter GUI you can run the Light version instead by runnning the command*
+
+   ```sh
+   python3 ./Imagego_light.py
+   ```
 
 ### Running the app on macOS
 *COMING SOON...*
