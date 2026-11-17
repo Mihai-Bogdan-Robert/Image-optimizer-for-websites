@@ -1,0 +1,7 @@
+services:
+  image-optimizer:
+    build: .
+    container_name: image-optimizer
+    ports:
+      - "8080:80"
+    restart: unless-stopped

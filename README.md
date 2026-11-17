@@ -1,148 +1,118 @@
-<a id="back-top"></a>
-<div align="center">
-  <img src="logo.png" alt="App Logo" title="Imagego app logo">
-</div>
+# Image Optimizer
 
-# Imagego App
+A powerful React-based image optimization tool that runs entirely in your browser. Compress, resize, and convert your images with an intuitive wizard-style interface — no server uploads required!
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#️-built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#-technical-requirements">Technical Requirements</a></li>
-        <li><a href="#️-how-to-use-the-app">How to Use the App</a></li>
-        <li><a href="#running-the-app-on-linuxwindows">Running the app on Linux/Windows</a></li>
-        <li><a href="#running-the-app-on-macos">Running the app on macOS</a></li>
-      </ul>
-    </li>
-    <li><a href="#-how-does-Imagego-work">How does Imagego work</a></li>
-    <li><a href="#-report-bugs--issues">Report Bugs & Issues</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
+## Features
 
----
+### 🧙 Wizard-Style Interface
+Step through the optimization process with a clean, guided workflow:
+1. **Upload** → 2. **Resize** → 3. **Compress** → 4. **Convert**
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+At each step, you can:
+- Skip the step if not needed
+- Process and download results
+- Continue to the next optimization step
 
-This is a productivity-boosting app I built to streamline the process of resizing, renaming, compressing and converting large batches of images when preparing them for deployment in an application or on a Website where performance is needed. If you often find yourself working with many pictures that need to be processed in bulk, this tool might just save you a ton of time!
+### Upload System
+- ✅ **Drag & Drop** - Simply drag images onto the drop zone
+- ✅ **Multi-file Upload** - Select multiple images at once
+- ✅ **Folder Upload** - Upload entire folders of images
 
-Image processing functionalities the app offers:
-* Image Resizing
-* Image Renaming
-* Image Conversion (any image filetype to .webp)
-* WEBP Image Compression
-* A Wizard combining all the functions *COMING SOON...*
+### Image Resizing (Step 2)
+- ✅ **Predefined Presets**:
+  - Hero (1920×1080) - Full-width banners
+  - Product (800×800) - E-commerce images
+  - Thumbnail (300×300) - Small previews
+  - Normal (1200×800) - Standard web images
+  - Custom dimensions
+- ✅ **Aspect Ratio Preservation** - Maintain original proportions
+- ✅ **No Upscaling** - Images are never enlarged beyond original size
 
+### Image Compression (Step 3)
+- ✅ **Lossy & Lossless Compression** - Full control over compression mode
+- ✅ **Auto-optimization** - Automatic best-quality-to-size detection
+- ✅ **Quality Control** - Adjustable compression quality (1-100)
+- ✅ **Metadata Stripping** - Remove EXIF and other metadata
 
-### ⚙️ Built With
+### Format Conversion (Step 4)
+- ✅ **WebP Conversion** - Convert images to WebP for optimal web performance
+- ✅ **Format Options** - Choose WebP, JPEG, PNG, or keep original format
+- ✅ **SVG Preservation** - SVG files are preserved in their original format
 
-This app was built using Python and various Python libraries. It offers a python GUI built with tkinter. More details about the tehnologies used can be found in the Requirements section.
+### Privacy
+- 🔒 **100% Client-side** - All processing happens locally in your browser
+- 🔒 **No Server Uploads** - Your images never leave your device
 
-[![Python][Python]][Python-url]
+## Tech Stack
 
-<!-- GETTING STARTED -->
+- **React 18** with TypeScript
+- **Vite** for fast development and building
+- **browser-image-compression** for image processing
+- **JSZip** for ZIP file generation
+- **CSS Modules** for scoped styling
+
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-### 🚀 Technical Requirements
+### Installation
 
-Below is a picture with all the imported libraries that are required for this app to work.
+```bash
+# Install dependencies
+npm install
 
-<img src="requirements.png" alt="App Requirements" title="Imagego library requirements">
+# Start development server
+npm run dev
 
-You can easily install all required packages with the help of the *requirements.txt* file by running the following command (You need to have *python3* and *pip3* installed):
+# Build for production
+npm run build
 
-*COMING SOON...*
-bash:
-  ```sh
-pip3 install -r requirements.txt
-  ```
-<!-- HOW TO USE THE APP -->
-### 🛠️ How to Use the App
+# Preview production build
+npm run preview
+```
 
-To install the application simply clone the git repository locally and run the requirements installation command to install all the required packages. Afterwards just run the python file and you are good to go.
+### Development
 
-### Running the app on Linux/Windows
+The development server runs at `http://localhost:5173` with hot module replacement.
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Mihai-Bogdan-Robert/Image-optimizer-for-websites.git
-   ```
-2. Run the program
-   ```sh
-   python3 ./Imagego.py
-   ```
+## Project Structure
 
-*If you get some errors with the normal app that uses a tkinter GUI you can run the Light version instead by runnning the command*
+```
+src/
+├── components/          # React components
+│   ├── DropZone.tsx    # Upload step with drag & drop
+│   ├── ResizeStep.tsx  # Resize wizard step
+│   ├── CompressStep.tsx # Compression wizard step
+│   └── ConvertStep.tsx # Format conversion wizard step
+├── hooks/
+│   └── useImageProcessor.ts # State management & processing logic
+├── utils/
+│   ├── imageProcessor.ts    # Image processing utilities
+│   ├── downloadUtils.ts     # Download and ZIP utilities
+│   └── constants.ts         # Preset sizes and defaults
+├── types/
+│   └── index.ts        # TypeScript type definitions
+├── App.tsx             # Main application with wizard navigation
+└── main.tsx            # Application entry point
+```
 
-   ```sh
-   python3 ./Imagego_light.py
-   ```
+## Usage
 
-### Running the app on macOS
-*COMING SOON...*
+1. **Upload**: Drag and drop images or select files/folders
+2. **Resize**: Choose a preset size or enter custom dimensions (or skip)
+3. **Compress**: Select compression mode and quality (or skip)
+4. **Convert**: Choose output format and download your optimized images
 
-<!-- HOW DOES Imagego WORK -->
-## ✨ How does Imagego work
+## Browser Support
 
-Imagego application is split into 4 different tabs acoording to the functionalities:
-* Resize Images
-* Rename Images
-* Convert Images
-* Compress Images
+Works in all modern browsers that support:
+- Canvas API
+- Web Workers
+- File API
+- ES2020+
 
-By clicking a tab you will be taken to the page for that specific functionality.
-
-#### Image Resizer
-
-The Image resizer works by taking all the selected Images as an input and looking for the longer side of the image (Length or Width) and if the longer side is larger than *1600px* then the image gets resized so that the longer side has less than *1600px*. You also have a preview for all images before and after the resizing.
-
-#### Image Renamer
-
-The Image renamer works by taking *n* number of images as an input. And computing the smallest factorial number *x!* that is larger or equal to *n*. Afterwards it prompts you to enter at least *x* different keywords separated by a comma (*keyword1,keyword2, ...*). It then computes all the permutations of the keywords and uses each permutation for each image and concatenates the keywords sepparating them by a *'_'*. In the end the names of the pictures will look like this: *picture1: keyword1_keyword2_keyword3 picture2: keyword1_keyword3_keyword2* . There is also a *"Preview Names"* functionality that lets you see all the names that will be generated. This way of renaming pictures is very good for SEO and Web optimization.
-NOTE! You need to enter at least the number of keywords specified by the program for this to work.
-
-#### Image Converter
-
-The Image Converter like the name suggests converts any picture format into *.webp* format. In the conversion you can choose how much of the original quality is maintained (recommended above 80% for maximum quality). This operation can be done in batches.
-
-#### Webp Image Compresser
-
-The Compresser only accepts webp files and it essentialy compresses you images with the setting sof your choice.
-
-<!-- BUGS AND ISSUES -->
-## 🐞 Report Bugs & Issues
-
-If you come across any errors or bugs while using the app, please don't hesitate to [notify me](mailto:bogdanmihairobert@gmail.com) or open an issue in the repository. Your feedback helps improve the app!
-
-<!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<!-- CONTACT -->
-## Contact
-
-Bogdan Mihai Robert - https://www.linkedin.com/in/mihai-robert-bogdan/
-
-Thanks for checking out the project! 👨‍💻✨
-
-<p align="right"><a href="#back-top"><i class="fas fa-arrow-up"></i></a></p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[Python]: https://www.python.org/static/img/python-logo.png
-[Python-url]: https://www.python.org/
+MIT

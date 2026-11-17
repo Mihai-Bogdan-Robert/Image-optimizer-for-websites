@@ -1,0 +1,194 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid var(--color-gray-200);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoImg {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+}
+
+.headerBtn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--color-gray-200);
+  background: white;
+  color: var(--color-gray-600);
+  transition: all 0.15s ease;
+}
+
+.headerBtn:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-300);
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.statsBar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #047857;
+  line-height: 1.2;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #059669;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 4px;
+}
+
+.statNegative {
+  color: #dc2626;
+}
+
+.wizardContainer {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.stepIndicator {
+  display: flex;
+  border-bottom: 1px solid var(--color-gray-200);
+  background: var(--color-gray-50);
+}
+
+.step {
+  flex: 1;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  background: transparent;
+  color: var(--color-gray-400);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 24px;
+  background: var(--color-gray-200);
+}
+
+.step:hover:not(.stepDisabled) {
+  background: var(--color-gray-100);
+}
+
+.step.stepActive {
+  color: var(--color-primary);
+  background: white;
+}
+
+.step.stepCompleted {
+  color: var(--color-success);
+}
+
+.step.stepDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.stepNumber {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  background: var(--color-gray-200);
+  color: var(--color-gray-500);
+}
+
+.step.stepActive .stepNumber {
+  background: var(--color-primary);
+  color: white;
+}
+
+.step.stepCompleted .stepNumber {
+  background: var(--color-success);
+  color: white;
+}
+
+.stepContent {
+  padding: 32px;
+  min-height: 400px;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--color-gray-500);
+  font-size: 0.8rem;
+}
