@@ -1,11 +1,17 @@
 .dropzone {
   border: 2px dashed var(--color-gray-300);
   border-radius: 12px;
-  padding: 48px 32px;
+  padding: 32px 16px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
   background: var(--color-gray-50);
+}
+
+@media (min-width: 640px) {
+  .dropzone {
+    padding: 48px 32px;
+  }
 }
 
 .dropzone:hover,
@@ -22,14 +28,23 @@
 }
 
 .uploadIcon {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   background: var(--color-gray-100);
-  border-radius: 16px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 24px;
+}
+
+@media (min-width: 640px) {
+  .uploadIcon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    font-size: 28px;
+  }
 }
 
 .dropzone:hover .uploadIcon,
@@ -50,8 +65,20 @@
 
 .uploadButtons {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
   margin-top: 8px;
+  width: 100%;
+  max-width: 280px;
+}
+
+@media (min-width: 640px) {
+  .uploadButtons {
+    flex-direction: row;
+    gap: 12px;
+    width: auto;
+    max-width: none;
+  }
 }
 
 .uploadBtn {
@@ -63,8 +90,16 @@
   transition: all 0.15s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   border: none;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .uploadBtn {
+    width: auto;
+  }
 }
 
 .uploadBtn.primary {
@@ -133,8 +168,15 @@
 
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
 }
 
 .imageThumb {
@@ -166,12 +208,18 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.15s ease;
 }
 
-.imageThumb:hover .removeBtn {
-  opacity: 1;
+@media (hover: hover) {
+  .removeBtn {
+    opacity: 0;
+  }
+
+  .imageThumb:hover .removeBtn {
+    opacity: 1;
+  }
 }
 
 .removeBtn:hover {
